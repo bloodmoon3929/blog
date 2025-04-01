@@ -55,6 +55,12 @@ export default (() => {
 
 
         <meta name="google-site-verification" content="XN7PJO0NnqOBflBD3-yfQ-0A20u5Eped-LoZ3kbNmjQ" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9389715933657453"
+     crossorigin="anonymous"></script>
+
+
+
+
 
         <meta name="og:site_name" content={cfg.pageTitle}></meta>
         <meta property="og:title" content={title} />
