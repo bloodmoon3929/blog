@@ -17,7 +17,21 @@ const config: QuartzConfig = {
     },
     locale: "ko-KR",
     baseUrl: "bloodmoon3929.github.io/blog",
-    ignorePatterns: ["private", "templates", ".obsidian", ".git", ".trash", "Obsidian", "웹뷰어", "잡다한 것", "첨부파일", "템플릿릿"],
+    ignorePatterns: [
+      "private", 
+      "templates", 
+      ".obsidian", 
+      ".git", 
+      ".trash", 
+      "Obsidian", 
+      "웹뷰어", 
+      "잡다한 것", 
+      "첨부파일", 
+      "템플릿", 
+      "테블릿으로 컴퓨터 원격 조종.md",
+      "링크들.md",
+      "작성해야할 문서.md"
+    ],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
