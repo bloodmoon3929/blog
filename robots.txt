@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bloodmoon3929.github.io/blog/sitemap.xml
