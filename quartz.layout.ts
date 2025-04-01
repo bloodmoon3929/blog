@@ -5,7 +5,21 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.Comments({
+      provider: "giscus",
+      options: {
+        repo: "bloodmoon3929/blog",
+        repoId: "R_kgDOORgWig",
+        category: "General",  // 실제 GitHub Discussions 카테고리 이름
+        categoryId: "DIC_kwDOORgWis4Cop9Z",  // 실제 카테고리 ID로 교체하세요
+        mapping: "pathname",
+        strict: false,
+        reactionsEnabled: true,
+        inputPosition: "top"
+      }
+    }),
+  ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/jackyzha0/quartz",
@@ -43,19 +57,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
-    Component.Comments({
-      provider: "giscus",
-      options: {
-        repo: "bloodmoon3929/blog",
-        repoId: "R_kgDOORgWig",
-        category: "General",  // 실제 GitHub Discussions 카테고리 이름
-        categoryId: "DIC_kwDOORgWis4Cop9Z",  // 실제 카테고리 ID로 교체하세요
-        mapping: "pathname",
-        strict: false,
-        reactionsEnabled: true,
-        inputPosition: "top"
-      }
-    }),
   ],
 }
 
