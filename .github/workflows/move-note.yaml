@@ -45,7 +45,7 @@ jobs:
       - name: Update image paths in markdown files
         run: |
           if [ -d "content" ]; then
-            find content -type f -name "*.md" -exec sed -i 's|img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/|content/assets/|g' {} \; || echo "No markdown files to update"
+            find content -type f -name "*.md" -exec sed -i 's|img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/||g' {} \; || echo "No markdown files to update"
           fi
           
       - name: Commit changes
