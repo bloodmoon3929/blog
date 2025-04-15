@@ -82,7 +82,7 @@ const config: QuartzConfig = {
       }),
       Plugin.ObsidianFlavoredMarkdown({ 
         enableInHtmlEmbed: true,
-        wikilinks: true
+        wikilinks: true,
       }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
