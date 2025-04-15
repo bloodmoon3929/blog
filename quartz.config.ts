@@ -22,15 +22,7 @@ const config: QuartzConfig = {
       "templates", 
       ".obsidian", 
       ".git", 
-      ".trash", 
-      "Obsidian", 
-      "웹뷰어", 
-      "잡다한 것", 
-      "첨부파일", 
-      "템플릿", 
-      "테블릿으로 컴퓨터 원격 조종.md",
-      "링크들.md",
-      "작성해야할 문서.md"
+      ".trash"
     ],
     defaultDateType: "modified",
     theme: {
