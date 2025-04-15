@@ -44,7 +44,7 @@ Force : 힘
 
 ### 브루트포스 예제
 
-![[첨부파일/queue/Image.png]]  
+![[assets/queue/Image.png]]  
 위와 같은 자물쇠를 다들 본적 있으리라 생각한다.  
 해당 비밀번호를 찾아보는 간단한 예제를 들어보려고 한다.  
 비밀번호는 내가 입력하는 방식으로 했다.
@@ -76,7 +76,7 @@ public class BruteForce {
 }
 ```
 
-![[첨부파일/queue/Image 1.png]]
+![[assets/queue/Image 1.png]]
 
 0000부터 9999까지 4자리 수를 모두 탐색해서 비밀번호를 찾았다.
 

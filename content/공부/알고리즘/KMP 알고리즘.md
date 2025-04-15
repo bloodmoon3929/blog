@@ -5,7 +5,7 @@ KMP 알고리즘
 
 접두부, 접미부
 
-![[첨부파일/algrithm/image02.png]]
+![[assets/algrithm/image02.png]]
 이 때, 절대 접두부나 접미부가 문자열의 전체가 될 수 없습니다.
 
 위의 예제처럼 ABCA의 접두부를 기준으로 생각해 봅시다.

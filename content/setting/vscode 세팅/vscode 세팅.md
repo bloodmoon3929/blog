@@ -14,14 +14,14 @@ https://blog.amylo.diskstation.me/algorithm/Starting_Algorithm_with_VSCode_C++/
 
 ## MinGW 설치
 ### PC의 운영체제 확인
-![[첨부파일/Gseed사진/image01.png]]
+![[assets/Gseed사진/image01.png]]
 윈도우 검색에 설정을 검색하면, 다음과 같은 화면이 나온다.
 홈 아래의 시스템 항목을 누른다.
 
-![[첨부파일/vscode 세팅/image02.png]]
+![[assets/vscode 세팅/image02.png]]
 그 후 화면을 가장 아래까지 내려 정보를 누른다.
 
-![[첨부파일/vscode 세팅/image03.png]]
+![[assets/vscode 세팅/image03.png]]
 시스템 종류를 보면, 본인의 컴퓨터가 몇 bit 컴퓨터인지 알 수 있다.
 
 #### MinGW 다운 방법
@@ -31,10 +31,10 @@ https://www.mingw-w64.org/
 
 정식 사이트로 진행 하는 방법은 다음과 같다.
 
-![[첨부파일/vscode 세팅/image04.png]]
+![[assets/vscode 세팅/image04.png]]
 링크를 통해 들어간 홈페이지에서 download 항목 접속
 
-![[첨부파일/vscode 세팅/image05.png]]
+![[assets/vscode 세팅/image05.png]]
 스크롤을 내린후 source forge 항목에 접속
 
 ![[image06.png]]

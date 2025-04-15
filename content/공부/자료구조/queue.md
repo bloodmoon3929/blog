@@ -10,7 +10,7 @@
 - **프런트(Front)와 리어(Rear):** 큐의 시작과 끝 지점을 나타내는 두 포인터입니다. 이들은 데이터의 추가 및 제거에 사용됩니다.
 - **리어(Rear):** 큐의 끝 지점을 가리키는 포인터입니다. 큐에 추가 연산이 수행되면, 새로운 데이터가 리어에 추가됩니다.
 
-![[첨부파일/queue/Image.png|image]]
+![[assets/queue/Image.png|image]]
 
 **[큐 용어]**
 
@@ -34,7 +34,7 @@
 ## 4. 큐의 종류
 
 - **선형 큐 (Linear Queue):** 데이터를 FIFO 순서로 처리하는 가장 기본적인 큐  
-    ![[첨부파일/queue/Image 1.png|image]]
+    ![[assets/queue/Image 1.png|image]]
     
 - **환형 큐 (Circular Queue):** 큐의 마지막 요소가 첫 요소와 연결된 큐로, 원형으로 순환  
     ![[Image 2.png|image]]
