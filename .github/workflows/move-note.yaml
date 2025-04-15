@@ -1,0 +1,44 @@
+name: Move Notes and Assets to Content Folder
+
+on:
+  push:
+    branches:
+      - v4
+    paths:
+      - 'src/site/notes/**'
+      - 'src/site/img/user/첨부파일/**'
+
+jobs:
+  move-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up content structure
+        run: |
+          # content 폴더 생성
+          mkdir -p content
+          mkdir -p content/assets
+          
+          # 마크다운 파일 복사
+          cp -r src/site/notes/* content/
+          
+          # 이미지 파일 복사 (첨부파일 -> assets)
+          if [ -d "src/site/img/user/첨부파일" ]; then
+            cp -r src/site/img/user/첨부파일/* content/assets/
+          fi
+          
+      - name: Update image paths in markdown files
+        run: |
+          # 마크다운 파일에서 이미지 경로 참조 수정
+          find content -type f -name "*.md" -exec sed -i 's|첨부파일/|assets/|g' {} \;
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add content/
+          git commit -m "Copy notes and migrate attachments to content/assets" || echo "No changes to commit"
+          git push
