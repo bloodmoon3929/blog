@@ -1,48 +1,49 @@
-name: Move Files to Content Folder
+name: Copy Files and Deploy Quartz
 
 on:
   push:
     branches:
       - v4
-    paths:
-      - 'src/site/**'
+
+permissions:
+  contents: write  # 파일 복사 및 커밋을 위해 write 권한 필요
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  move-files:
-    runs-on: ubuntu-latest
+  process-and-build:
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       - name: Debug - List directories
         run: |
           echo "Listing repository structure:"
           ls -la
           echo "Listing src directory if exists:"
           ls -la src || echo "src directory not found"
-          echo "Listing src/site directory if exists:"
-          ls -la src/site || echo "src/site directory not found"
       
       - name: Set up content structure
         run: |
-          # content 폴더 생성
           mkdir -p content
           mkdir -p content/assets
           
-          # src/site/notes 경로가 있으면 마크다운 파일 복사
           if [ -d "src/site/notes" ]; then
             cp -r src/site/notes/* content/ || echo "No files to copy from notes"
           fi
           
-          # 이미지 파일 복사 시도
           if [ -d "src/site/img/user/첨부파일" ]; then
             cp -r src/site/img/user/첨부파일/* content/assets/ || echo "No files to copy from attachments"
           fi
       
       - name: Update image paths in markdown files
         run: |
-          # 마크다운 파일이 있으면 이미지 경로 수정
           if [ -d "content" ]; then
             find content -type f -name "*.md" -exec sed -i 's|첨부파일/|assets/|g' {} \; || echo "No markdown files to update"
           fi
@@ -54,3 +55,29 @@ jobs:
           git add content/ || echo "No content to add"
           git commit -m "Copy files to content folder structure" || echo "No changes to commit"
           git push || echo "Failed to push changes"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          
+      - name: Install Dependencies
+        run: npm ci
+        
+      - name: Build Quartz
+        run: npx quartz build
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: process-and-build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
