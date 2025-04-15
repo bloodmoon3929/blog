@@ -6,7 +6,7 @@ on:
       - v4
 
 permissions:
-  contents: write
+  contents: write  # 파일 복사 및 커밋을 위해 write 권한 필요
   pages: write
   id-token: write
 
@@ -28,8 +28,6 @@ jobs:
           ls -la
           echo "Listing src directory if exists:"
           ls -la src || echo "src directory not found"
-          echo "Listing img directory if exists:"
-          ls -la img || echo "img directory not found"
       
       - name: Set up content structure
         run: |
@@ -37,29 +35,17 @@ jobs:
           mkdir -p content/assets
           
           if [ -d "src/site/notes" ]; then
-            echo "Copying markdown files..."
             cp -r src/site/notes/* content/ || echo "No files to copy from notes"
           fi
           
-          if [ -d "img/user/첨부파일" ]; then
-            echo "Copying images from img/user/첨부파일..."
-            cp -r img/user/첨부파일/* content/assets/ || echo "No files to copy from img/user/첨부파일"
-          elif [ -d "src/site/img/user/첨부파일" ]; then
-            echo "Copying images from src/site/img/user/첨부파일..."
-            cp -r src/site/img/user/첨부파일/* content/assets/ || echo "No files to copy from src/site/img/user/첨부파일"
+          if [ -d "src/site/img/user/첨부파일" ]; then
+            cp -r src/site/img/user/첨부파일/* content/assets/ || echo "No files to copy from attachments"
           fi
       
       - name: Update image paths in markdown files
         run: |
           if [ -d "content" ]; then
-            echo "Updating image paths in markdown files..."
-            # GitHub 형식의 경로를 assets로 변환
-            find content -type f -name "*.md" -exec sed -i 's|blob/v4/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/|assets/|g' {} \;
-            # 일반 상대 경로도 변환
-            find content -type f -name "*.md" -exec sed -i 's|첨부파일/|assets/|g' {} \;
-            # URL 인코딩된 경로도 변환
-            find content -type f -name "*.md" -exec sed -i 's|%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/|assets/|g' {} \;
-            echo "Image paths updated"
+            find content -type f -name "*.md" -exec sed -i 's|첨부파일/||g' {} \; || echo "No markdown files to update"
           fi
           
       - name: Commit changes
