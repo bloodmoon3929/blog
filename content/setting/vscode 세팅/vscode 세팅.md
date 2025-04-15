@@ -18,7 +18,7 @@ https://blog.amylo.diskstation.me/algorithm/Starting_Algorithm_with_VSCode_C++/
 
 ## MinGW 설치
 ### PC의 운영체제 확인
-![첨부파일/Gseed-image01.png](/Gseed-image01.png)
+![첨부파일/setting-vsc-image01.png](/setting-vsc-image01.png)
 윈도우 검색에 설정을 검색하면, 다음과 같은 화면이 나온다.
 홈 아래의 시스템 항목을 누른다.
 
