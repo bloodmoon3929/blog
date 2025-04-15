@@ -1,12 +1,11 @@
-name: Move Notes and Assets to Content Folder
+name: Move Files to Content Folder
 
 on:
   push:
     branches:
       - v4
     paths:
-      - 'src/site/notes/**'
-      - 'src/site/img/user/첨부파일/**'
+      - 'src/site/**'
 
 jobs:
   move-files:
@@ -16,29 +15,42 @@ jobs:
         with:
           fetch-depth: 0
       
+      - name: Debug - List directories
+        run: |
+          echo "Listing repository structure:"
+          ls -la
+          echo "Listing src directory if exists:"
+          ls -la src || echo "src directory not found"
+          echo "Listing src/site directory if exists:"
+          ls -la src/site || echo "src/site directory not found"
+      
       - name: Set up content structure
         run: |
           # content 폴더 생성
           mkdir -p content
           mkdir -p content/assets
           
-          # 마크다운 파일 복사
-          cp -r src/site/notes/* content/
-          
-          # 이미지 파일 복사 (첨부파일 -> assets)
-          if [ -d "src/site/img/user/첨부파일" ]; then
-            cp -r src/site/img/user/첨부파일/* content/assets/
+          # src/site/notes 경로가 있으면 마크다운 파일 복사
+          if [ -d "src/site/notes" ]; then
+            cp -r src/site/notes/* content/ || echo "No files to copy from notes"
           fi
           
+          # 이미지 파일 복사 시도
+          if [ -d "src/site/img/user/첨부파일" ]; then
+            cp -r src/site/img/user/첨부파일/* content/assets/ || echo "No files to copy from attachments"
+          fi
+      
       - name: Update image paths in markdown files
         run: |
-          # 마크다운 파일에서 이미지 경로 참조 수정
-          find content -type f -name "*.md" -exec sed -i 's|첨부파일/|assets/|g' {} \;
+          # 마크다운 파일이 있으면 이미지 경로 수정
+          if [ -d "content" ]; then
+            find content -type f -name "*.md" -exec sed -i 's|첨부파일/|assets/|g' {} \; || echo "No markdown files to update"
+          fi
           
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add content/
-          git commit -m "Copy notes and migrate attachments to content/assets" || echo "No changes to commit"
-          git push
+          git add content/ || echo "No content to add"
+          git commit -m "Copy files to content folder structure" || echo "No changes to commit"
+          git push || echo "Failed to push changes"
