@@ -1,40 +1,40 @@
-// adsense-spa-fix.js
+// static/js/adsense-spa-fix.js
 
-// AdSense 초기화 상태 추적
-let adsenseInitialized = false;
-
-// 페이지 변경 감지 및 광고 초기화
-function initializeAdsense() {
-  // 이미 AdSense 스크립트가 있는지 확인
-  const hasScript = document.querySelector('script[src*="pagead2.googlesyndication.com"]');
+// AdSense iframe 스타일 수정 함수
+function fixAdSenseDisplay() {
+  // Google ESF iframe 찾기
+  const googleEsfFrame = document.getElementById('google_esf');
   
-  if (!hasScript) {
-    console.log("AdSense 스크립트 추가 중...");
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9389715933657453';
-    script.crossOrigin = 'anonymous';
-    document.head.appendChild(script);
+  if (googleEsfFrame) {
+    // 스타일 재설정
+    googleEsfFrame.style.display = '';
+    console.log('Google ESF frame display style reset');
+  } else {
+    console.log('Google ESF frame not found');
   }
   
-  // 광고 다시 초기화
-  setTimeout(function() {
-    try {
-      console.log("AdSense 초기화 시도 중...");
-      (adsbygoogle = window.adsbygoogle || []).push({});
-      console.log("AdSense 초기화 완료");
-    } catch (e) {
-      console.error("AdSense 초기화 실패:", e);
+  // AdSense 요소들 찾기
+  const adElements = document.querySelectorAll('.adsbygoogle');
+  
+  // 모든 AdSense 요소의 스타일 재설정
+  adElements.forEach(function(el) {
+    if (el.style.display === 'none') {
+      el.style.display = 'block';
+      console.log('AdSense element display reset');
     }
-  }, 300);
+  });
 }
 
-// 페이지 전환 감지
+// 페이지 내비게이션 이벤트 캐치
 document.addEventListener('nav', function() {
-  console.log("페이지 전환 감지됨");
-  adsenseInitialized = false;
-  initializeAdsense();
+  console.log('Navigation detected, fixing AdSense display...');
+  
+  // 약간의 지연 후 광고 표시 수정 (DOM 업데이트 후)
+  setTimeout(fixAdSenseDisplay, 300);
 });
 
-// 페이지 로드 시 초기화
-window.addEventListener('load', initializeAdsense);
+// 페이지 로드 시에도 실행
+window.addEventListener('load', function() {
+  // 페이지 로드 시에는 더 긴 지연 필요
+  setTimeout(fixAdSenseDisplay, 1000);
+});
