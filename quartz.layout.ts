@@ -1,4 +1,5 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
+import { AdSense } from "./quartz/components/AdSense"
 import * as Component from "./quartz/components"
 
 // components shared across all pages
@@ -36,6 +37,7 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
+    AdSense(),
     Component.ContentMeta(),
     Component.TagList(),
   ],
