@@ -13,12 +13,10 @@ const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
 
 
 const copyFile = async (argv: Argv, fp: FilePath) => {
-  const notesDirectory = joinSegments(argv.directory, "notes")
+  const src = joinSegments(argv.directory, fp) as FilePath
 
-  const src = joinSegments(/*argv.directory*/notesDirectory, fp) as FilePath
-
-  const name = slugifyFilePath(fp)
-  const dest = joinSegments(argv.output, name) as FilePath
+  //const name = slugifyFilePath(fp)
+  const dest = joinSegments(argv.output, "notes", slugifyFilePath(fp)) as FilePath
 
   // ensure dir exists
   const dir = path.dirname(dest) as FilePath
