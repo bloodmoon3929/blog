@@ -24,9 +24,11 @@ const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
 const copyFile = async (argv: Argv, fp: FilePath) => {
   const src = joinSegments(argv.directory, fp) as FilePath
 
-  const name = slugifyFilePath(fp)
-  const dest = joinSegments(argv.output, name) as FilePath
-
+  //const name = slugifyFilePath(fp)
+  //const dest = joinSegments(argv.output, name) as FilePath
+  const relativePath = path.relative("src/site/notes", src)
+  const dest = joinSegments(argv.output, "notes", relativePath) as FilePath
+  
   // ensure dir exists
   const dir = path.dirname(dest) as FilePath
   await fs.promises.mkdir(dir, { recursive: true })
