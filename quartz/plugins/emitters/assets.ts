@@ -8,13 +8,14 @@ import { QuartzConfig } from "../../cfg"
 
 const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
   const noteAssets = await glob("**", argv.directory, ["**/*.md", ...cfg.configuration.ignorePatterns])
-  const userAssets = await glob("**", "src/site/img/user/첨부파일", []) // 여기 경로 하드코딩됨
-  return [...noteAssets, ...userAssets]
+  //const userAssets = await glob("**", "src/site/img/user/첨부파일", []) // 여기 경로 하드코딩됨
+  return [...noteAssets/*, ...userAssets*/]
 }
 
 
 const copyFile = async (argv: Argv, fp: FilePath) => {
-  const src = joinSegments(argv.directory, fp) as FilePath
+  const src = joinSegments("src/site/notes", fp) as FilePath
+  //const src = joinSegments(argv.directory, fp) as FilePath
 
   const name = slugifyFilePath(fp)
   const dest = joinSegments(argv.output, name) as FilePath
