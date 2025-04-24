@@ -6,12 +6,11 @@ import { glob } from "../../util/glob"
 import { Argv } from "../../util/ctx"
 import { QuartzConfig } from "../../cfg"
 
-const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
-  const noteAssets = await glob("**", argv.directory, ["**/*.md", ...cfg.configuration.ignorePatterns])
-  const userAssets = await glob("**", "src/site/img/user/첨부파일", []) // 여기 경로 하드코딩됨
-  return [...noteAssets, ...userAssets]
-}
-
+//const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
+//  const noteAssets = await glob("**", argv.directory, ["**/*.md", ...cfg.configuration.ignorePatterns])
+//  const userAssets = await glob("**", "src/site/img/user/첨부파일", []) // 여기 경로 하드코딩됨
+//  return [...noteAssets, ...userAssets]
+//}
 /*
 const copyFile = async (argv: Argv, fp: FilePath) => {
   
@@ -28,13 +27,26 @@ const copyFile = async (argv: Argv, fp: FilePath) => {
   return dest
 }
 */
-const copyFile = async (argv: Argv, fp: FilePath) => {
-  const src = joinSegments(argv.directory, fp) as FilePath
+type AssetToCopy = { path: FilePath, baseDir: string }
 
-  // 어떤 기준에서 상대 경로를 구할지 결정
-  const siteRoot = "src/site"
-  const absoluteSrc = path.resolve(argv.directory, fp)
-  const relativePath = path.relative(path.resolve(siteRoot), absoluteSrc)
+const filesToCopy = async (argv: Argv, cfg: QuartzConfig): Promise<AssetToCopy[]> => {
+  const noteAssets = await glob("**", argv.directory, ["**/*.md", ...cfg.configuration.ignorePatterns])
+  const userAssets = await glob("**", "src/site/img/user/첨부파일", [])
+
+  return [
+    ...noteAssets.map(path => ({ path, baseDir: argv.directory })),
+    ...userAssets.map(path => ({ path, baseDir: "src/site/img/user/첨부파일" })),
+  ]
+}
+
+
+
+const copyFile = async (argv: Argv, asset: AssetToCopy) => {
+  const { path: fp, baseDir } = asset
+
+  const src = joinSegments(baseDir, fp) as FilePath
+  const absoluteSrc = path.resolve(baseDir, fp)
+  const relativePath = path.relative(path.resolve("src/site"), absoluteSrc)
 
   const dest = joinSegments(argv.output, relativePath) as FilePath
   const dir = path.dirname(dest) as FilePath
@@ -45,14 +57,20 @@ const copyFile = async (argv: Argv, fp: FilePath) => {
   return dest
 }
 
+
 export const Assets: QuartzEmitterPlugin = () => {
   return {
     name: "Assets",
     async *emit({ argv, cfg }) {
       const fps = await filesToCopy(argv, cfg)
+      for (const asset of fps) {
+        yield copyFile(argv, asset)
+      }
+      /*
       for (const fp of fps) {
         yield copyFile(argv, fp)
       }
+        */
     },
     async *partialEmit(ctx, _content, _resources, changeEvents) {
       for (const changeEvent of changeEvents) {
