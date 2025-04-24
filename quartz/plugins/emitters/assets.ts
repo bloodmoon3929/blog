@@ -8,12 +8,12 @@ import { QuartzConfig } from "../../cfg"
 
 const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
   const noteAssets = await glob("**", argv.directory, ["**/*.md", ...cfg.configuration.ignorePatterns])
-  //const userAssets = await glob("**", "src/site/img/user/첨부파일", []) // 여기 경로 하드코딩됨
+  const userAssets = await glob("**", "src/site/img/user/첨부파일", []) // 여기 경로 하드코딩됨
   return [...noteAssets/*, ...userAssets*/]
 }
 
-/*
 const copyFile = async (argv: Argv, fp: FilePath) => {
+  
   const src = joinSegments(argv.directory, fp) as FilePath
 
   const name = slugifyFilePath(fp)
@@ -24,22 +24,6 @@ const copyFile = async (argv: Argv, fp: FilePath) => {
   await fs.promises.mkdir(dir, { recursive: true })
 
   await fs.promises.copyFile(src, dest)
-  return dest
-}
-*/
-
-const copyFile = async (argv: Argv, fp: FilePath) => {
-  const src = joinSegments(argv.directory, fp) as FilePath
-
-  // 🔥 src/site/notes 기준 상대 경로
-  const notesRoot = joinSegments(argv.directory, "notes")
-  const relativePath = path.relative(notesRoot, src)
-  const dest = joinSegments(argv.output, relativePath) as FilePath
-
-  const dir = path.dirname(dest) as FilePath
-  await fs.promises.mkdir(dir, { recursive: true })
-  await fs.promises.copyFile(src, dest)
-
   return dest
 }
 
