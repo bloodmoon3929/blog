@@ -7,16 +7,25 @@ import { Argv } from "../../util/ctx"
 import { QuartzConfig } from "../../cfg"
 
 const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
-  const noteAssets = await glob("**", argv.directory, ["**/*.md", ...cfg.configuration.ignorePatterns])
-  return [...noteAssets]
+  const noteAssets = await glob("**", "src/site/notes", ["**/*.md", ...cfg.configuration.ignorePatterns])
+  
+  // 이미지 파일을 src/site/img/user/첨부파일에서 찾음
+  const userAssets = await glob("**", "src/site/img/user/첨부파일", ["**/*", ...cfg.configuration.ignorePatterns])
+  
+  // 두 경로에서 검색한 파일들을 모두 반환
+  return [...noteAssets, ...userAssets]
+
+
+  //const noteAssets = await glob("**", argv.directory, ["**/*.md", ...cfg.configuration.ignorePatterns])
+  //return [...noteAssets]
 }
 
 
 const copyFile = async (argv: Argv, fp: FilePath) => {
   const src = joinSegments(argv.directory, fp) as FilePath
 
-  //const name = slugifyFilePath(fp)
-  const dest = joinSegments(argv.output, "notes", slugifyFilePath(fp)) as FilePath
+  const name = slugifyFilePath(fp)
+  const dest = joinSegments(argv.output, name) as FilePath
 
   // ensure dir exists
   const dir = path.dirname(dest) as FilePath
