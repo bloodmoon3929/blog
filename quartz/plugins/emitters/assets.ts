@@ -12,6 +12,7 @@ const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
   return [...noteAssets, ...userAssets]
 }
 
+/*
 const copyFile = async (argv: Argv, fp: FilePath) => {
   
   const src = joinSegments(argv.directory, fp) as FilePath
@@ -24,6 +25,23 @@ const copyFile = async (argv: Argv, fp: FilePath) => {
   await fs.promises.mkdir(dir, { recursive: true })
 
   await fs.promises.copyFile(src, dest)
+  return dest
+}
+*/
+const copyFile = async (argv: Argv, fp: FilePath) => {
+  const src = joinSegments(argv.directory, fp) as FilePath
+
+  // 어떤 기준에서 상대 경로를 구할지 결정
+  const siteRoot = "src/site"
+  const absoluteSrc = path.resolve(argv.directory, fp)
+  const relativePath = path.relative(path.resolve(siteRoot), absoluteSrc)
+
+  const dest = joinSegments(argv.output, relativePath) as FilePath
+  const dir = path.dirname(dest) as FilePath
+
+  await fs.promises.mkdir(dir, { recursive: true })
+  await fs.promises.copyFile(src, dest)
+
   return dest
 }
 
