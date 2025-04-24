@@ -8,7 +8,7 @@ import { QuartzConfig } from "../../cfg"
 
 const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
   //const noteAssets = await glob("**", argv.directory, ["**/*.md", ...cfg.configuration.ignorePatterns])
-  const userAssets = await glob("**", "src/site/img/user/첨부파일", []) // 여기 경로 하드코딩됨
+  const userAssets = await glob("**", "src/site/img/user/첨부파일", ["**/*.md", ...cfg.configuration.ignorePatterns]) // 여기 경로 하드코딩됨
   return [/*...noteAssets,*/ ...userAssets]
 }
 
