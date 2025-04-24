@@ -7,14 +7,15 @@ import { Argv } from "../../util/ctx"
 import { QuartzConfig } from "../../cfg"
 
 const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
-  const notesDirectory = joinSegments(argv.directory, "notes")
-  const noteAssets = await glob("**", notesDirectory, ["**/*.md", ...cfg.configuration.ignorePatterns])
+  const noteAssets = await glob("**", argv.directory, ["**/*.md", ...cfg.configuration.ignorePatterns])
   return [...noteAssets]
 }
 
 
 const copyFile = async (argv: Argv, fp: FilePath) => {
-  const src = joinSegments(argv.directory, fp) as FilePath
+  const notesDirectory = joinSegments(argv.directory, "notes")
+
+  const src = joinSegments(/*argv.directory*/notesDirectory, fp) as FilePath
 
   const name = slugifyFilePath(fp)
   const dest = joinSegments(argv.output, name) as FilePath
