@@ -2,7 +2,7 @@ export const CommonArgv = {
   directory: {
     string: true,
     alias: ["d"],
-    default: "src/site",
+    default: "src/site/notes",
     describe: "directory to look for content files",
   },
   verbose: {
