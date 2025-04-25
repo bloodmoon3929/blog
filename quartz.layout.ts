@@ -35,6 +35,15 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
+    Component.MobileOnly(
+      Component.Flex({
+        direction :"column",
+        components: [
+          { Component: Component.Search(), grow: true, },
+          { Component: Component.Darkmode()},
+        ],
+      })
+    ),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
@@ -65,15 +74,15 @@ export const defaultContentPageLayout: PageLayout = {
       })
     ),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
+    Component.DesktopOnly(
+      Component.Flex({
+        direction :"column",
+        components: [
+          { Component: Component.Search(), grow: true, },
+          { Component: Component.Darkmode()},
+        ],
+      })
+    ),
     Component.Explorer(),
   ],
   right: [
