@@ -4,11 +4,14 @@ import { pathToRoot } from "../util/path"
 
 const Image: QuartzComponent = ({ fileData, displayClass }) => {
   const baseDir = pathToRoot(fileData.slug!)
-  const iconPath = "/static/icon" // 아이콘 경로 설정
 
+  // 고정된 아이콘 경로
+  const iconPath = "/static/icon"
+
+  // HTML 문자열로 반환
   return `
     <img
-      src="${iconPath}" 
+      src="${iconPath}"
       alt="아이콘 설명"
       class="${classNames(displayClass, 'image')}"
       onclick="window.location.href='${baseDir}'" />
