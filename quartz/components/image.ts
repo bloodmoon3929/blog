@@ -1,4 +1,4 @@
-// components/image.tsx
+/** @jsx h */
 import { h } from "preact"
 
 interface ImageProps {
