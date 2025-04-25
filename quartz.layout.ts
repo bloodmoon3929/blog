@@ -56,21 +56,21 @@ export const defaultContentPageLayout: PageLayout = {
     */
     Component.MobileOnly(
       Component.Flex({
-        direction: "column",
+        direction: "column", // 모바일에서는 세로로 배치
         components: [
           Component.Flex({
-            direction: "row",
+            direction: "row", // 그룹1은 가로로 배치
             components: [
               { Component: Component.Image() },
               { Component: Component.PageTitle() },
               { Component: Component.Spacer() },
             ],
           }),
-          { Component: Component.Spacer() },
+          { Component: Component.Spacer() }, // 그룹1과 그룹2 사이에 여백을 두기 위한 Spacer
           Component.Flex({
-            direction: "row",
+            direction: "row", // 그룹2는 가로로 배치
             components: [
-              {Component: Component.Search(),grow: true,},
+              { Component: Component.Search(), grow: true },
               { Component: Component.Darkmode() },
             ],
           }),
@@ -84,14 +84,11 @@ export const defaultContentPageLayout: PageLayout = {
           Component.Image(),
           Component.Flex({
             components: [
-              {
-                Component: Component.Search(),
-                grow: true,
-              },
+              { Component: Component.Search(), grow: true },
               { Component: Component.Darkmode() },
             ],
           }),
-        ]
+        ],
       }),
     ),
     Component.Explorer(),
