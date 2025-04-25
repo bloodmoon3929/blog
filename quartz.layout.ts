@@ -59,7 +59,6 @@ export const defaultContentPageLayout: PageLayout = {
         direction: "column", // 모바일에서는 세로로 배치
         components: [
           Component.Flex({
-            direction: "row", // 그룹1은 가로로 배치
             components: [
               { Component: Component.Image() },
               { Component: Component.PageTitle() },
@@ -68,7 +67,6 @@ export const defaultContentPageLayout: PageLayout = {
           }),
           { Component: Component.Spacer() }, // 그룹1과 그룹2 사이에 여백을 두기 위한 Spacer
           Component.Flex({
-            direction: "row", // 그룹2는 가로로 배치
             components: [
               { Component: Component.Search(), grow: true },
               { Component: Component.Darkmode() },
