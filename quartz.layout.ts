@@ -56,31 +56,44 @@ export const defaultContentPageLayout: PageLayout = {
     */
     Component.MobileOnly(
       Component.Flex({
-        direction: "row",
-
+        direction: "column",
         components: [
-          { Component: Component.Image() },
-          { Component: Component.PageTitle() },
+          Component.Flex({
+            direction: "row",
+            components: [
+              { Component: Component.Image() },
+              { Component: Component.PageTitle() },
+              { Component: Component.Spacer() },
+            ],
+          }),
+          { Component: Component.Spacer() },
+          Component.Flex({
+            direction: "row",
+            components: [
+              {Component: Component.Search(),grow: true,},
+              { Component: Component.Darkmode() },
+            ],
+          }),
         ],
       })
     ),
-    Component.DesktopOnly(Component.PageTitle()),
-    Component.DesktopOnly(Component.Image()),
-  
-    Component.MobileOnly(Component.Spacer()),
-  
-    // 두 번째 줄: Search + Darkmode
-    Component.Flex({
-      direction: "row",
-
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
+    Component.DesktopOnly(
+      Component.Flex({
+        components: [
+          Component.PageTitle(),
+          Component.Image(),
+          Component.Flex({
+            components: [
+              {
+                Component: Component.Search(),
+                grow: true,
+              },
+              { Component: Component.Darkmode() },
+            ],
+          }),
+        ]
+      }),
+    ),
     Component.Explorer(),
   ],
   right: [
