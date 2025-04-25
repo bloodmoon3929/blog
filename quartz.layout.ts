@@ -40,8 +40,22 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
   ],
   left: [
-    Component.PageTitle(),
-    Component.Image(),
+    Component.MobileOnly(
+      Component.Flex({
+        components: [
+          { Component: Component.PageTitle(), grow: true },
+          { Component: Component.Image() },
+        ],
+      })
+    ),
+    Component.DesktopOnly(
+      Component.Flex({
+        components: [
+          { Component: Component.PageTitle(), grow: true },
+          { Component: Component.Image() },
+        ],
+      })
+    ),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
