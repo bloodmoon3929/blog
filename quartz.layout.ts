@@ -39,19 +39,27 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ContentMeta(),
     Component.TagList(),
   ],
-  left: [
+  left: [/*
+    Component.Flex({
+      direction :"column",
+      components: [
+        { Component: Component.PageTitle(), grow: true },
+        { Component: Component.Image() },
+      ],
+    }),*/
     Component.MobileOnly(
       Component.Flex({
         components: [
-          { Component: Component.PageTitle(), grow: true },
           { Component: Component.Image() },
+          { Component: Component.PageTitle()},
         ],
       })
     ),
     Component.DesktopOnly(
       Component.Flex({
+        direction :"column",
         components: [
-          { Component: Component.PageTitle(), grow: true },
+          { Component: Component.PageTitle()},
           { Component: Component.Image() },
         ],
       })
