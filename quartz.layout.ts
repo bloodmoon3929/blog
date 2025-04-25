@@ -41,12 +41,7 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-    Component.Image({
-      src:"/icon.png",
-      alt:"코딩하는 사카밤바피스",
-      width:100,
-      height:50,
-    }),
+    Component.Image(),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
