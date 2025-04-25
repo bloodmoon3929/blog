@@ -14,7 +14,7 @@ const Image: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps
       src={iconPath}
       alt="개발하는 사카밤바피스"
       class={classNames(displayClass, 'image')}
-      onClick={handleClick}
+      onClick={() => window.location.href = baseDir}
     />
   )
 }
