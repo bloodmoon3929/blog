@@ -5,10 +5,9 @@ import { pathToRoot } from "../util/path"
 const Image: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
   const baseDir = pathToRoot(fileData.slug!)
 
-  // 고정된 아이콘 경로
-  const iconPath = "quartz/static/icon" // 경로를 맞춰주어야 합니다.
+  const iconPath = "quartz/static/icon.png" 
 
-  // JSX 형식으로 반환
+
   return (
     <img
       src={iconPath}
