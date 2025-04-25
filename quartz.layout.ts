@@ -40,55 +40,9 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
   ],
   left: [
-    // Mobile에서는 PageTitle과 Image를 가로로 배치
-    Component.MobileOnly(
-      Component.Flex({
-        direction: 'row', // 가로 배치
-        components: [
-          { Component: Component.PageTitle() },
-          { Component: Component.Image() },
-        ],
-      })
-    ),
-
-    // Desktop에서는 PageTitle과 Image를 세로로 배치
-    Component.DesktopOnly(
-      Component.Flex({
-        direction: 'column', // 세로 배치
-        components: [
-          { Component: Component.PageTitle() },
-          { Component: Component.Image() },
-        ],
-      })
-    ),
-
-    // Mobile에서 Search와 Explorer를 가로로 배치
-    Component.MobileOnly(
-      Component.Flex({
-        direction: 'row', // 가로 배치
-        components: [
-          { Component: Component.Search() },
-          { Component: Component.Explorer() },
-        ],
-      })
-    ),
-
-    // Desktop에서는 Search와 Explorer를 세로로 배치
-    Component.DesktopOnly(
-      Component.Flex({
-        direction: 'column', // 세로 배치
-        components: [
-          { Component: Component.Search() },
-          { Component: Component.Explorer() },
-        ],
-      })
-    ),
-  ],
-  /*
-  left: [
     Component.PageTitle(),
     Component.Image(),
-    Component.MobileOnly(Component.Spacer()),
+    //Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
         {
@@ -106,7 +60,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Backlinks(),
   ],
 }
-*/
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
