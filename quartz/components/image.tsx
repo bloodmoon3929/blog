@@ -15,12 +15,13 @@ const Image: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps
   }
 
   return (
-    <img
-      src={iconPath}
-      alt="개발하는 사카밤바피스"
-      class={classNames(displayClass, 'image')}
-      onClick={handleClick}
-    />
+    <a href={baseDir} style={{ display: "inline-block" }}>
+      <img
+        src={iconPath}
+        alt="개발하는 사카밤바피스"
+        class={classNames(displayClass, 'image')}
+      />
+    </a>
   )
 }
 
