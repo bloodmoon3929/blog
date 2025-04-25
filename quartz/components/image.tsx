@@ -8,16 +8,10 @@ const Image: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps
   const iconPath = "/static/icon.png" 
 
 
-  const handleClick = (e: MouseEvent) => {
-    e.preventDefault() // 기본 동작 방지
-    window.location.href = baseDir
-    console.log("Navigating to:", baseDir) // 디버깅용
-  }
-
   return (
     <a href={baseDir} style={{ display: "inline-block" }}>
       <img
-        src={iconPath}
+        src="/static/icon.png"
         alt="개발하는 사카밤바피스"
         class={classNames(displayClass, 'image')}
       />
