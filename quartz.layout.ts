@@ -59,8 +59,8 @@ export const defaultContentPageLayout: PageLayout = {
       Component.Flex({
         direction :"column",
         components: [
-          { Component: Component.PageTitle(), justify : "center"},
-          { Component: Component.Image(), justify : "center" },
+          { Component: Component.PageTitle()},
+          { Component: Component.Image()},
         ],
       })
     ),
