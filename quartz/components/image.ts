@@ -1,21 +1,22 @@
-import { QuartzComponent, QuartzComponentConstructor } from "./types"
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
 import { pathToRoot } from "../util/path"
 
-const Image: QuartzComponent = ({ fileData, displayClass }) => {
+const Image: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
   const baseDir = pathToRoot(fileData.slug!)
 
   // 고정된 아이콘 경로
-  const iconPath = "/static/icon"
+  const iconPath = "/static/icon" // 경로를 맞춰주어야 합니다.
 
-  // HTML 문자열로 반환
-  return `
+  // JSX 형식으로 반환
+  return (
     <img
-      src="${iconPath}"
+      src={iconPath}
       alt="아이콘 설명"
-      class="${classNames(displayClass, 'image')}"
-      onclick="window.location.href='${baseDir}'" />
-  `
+      class={classNames(displayClass, 'image')}
+      onClick={() => window.location.href = baseDir}
+    />
+  )
 }
 
 Image.css = `
