@@ -9,12 +9,14 @@ const Image: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps
   const iconPath = "/static/icon.png" 
 
 
-  return h('img', {
-    src: iconPath,
-    alt: "개발하는 사카밤바피스",
-    class: classNames(displayClass, 'image'),
-    onClick: () => window.location.href = baseDir
-  })
+  return (
+    <img
+      src={iconPath}
+      alt="개발하는 사카밤바피스"
+      class={classNames(displayClass, 'image')}
+      onClick={handleClick}
+    />
+  )
 }
 
 Image.css = `
@@ -24,6 +26,14 @@ Image.css = `
   height: 50px; 
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.image:active {
+  transform: scale(0.95);
 }
 `
 
