@@ -1,7 +1,6 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
 import { pathToRoot } from "../util/path"
-import { h } from "preact" // Preact의 createElement 함수
 
 const Image: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
   const baseDir = pathToRoot(fileData.slug!)
@@ -9,12 +8,18 @@ const Image: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps
   const iconPath = "/static/icon.png" 
 
 
+  const handleClick = (e: MouseEvent) => {
+    e.preventDefault() // 기본 동작 방지
+    window.location.href = baseDir
+    console.log("Navigating to:", baseDir) // 디버깅용
+  }
+
   return (
     <img
       src={iconPath}
       alt="개발하는 사카밤바피스"
       class={classNames(displayClass, 'image')}
-      onClick={() => window.location.href = baseDir}
+      onClick={handleClick}
     />
   )
 }
