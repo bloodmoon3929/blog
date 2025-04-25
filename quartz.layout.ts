@@ -40,18 +40,39 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
   ],
   left: [
+    /*
+    Component.PageTitle(),
+    Component.Image(),
+    Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
         {
-          Component: Component.PageTitle(),
+          Component: Component.Search(),
+          grow: true,
         },
-        { Component: Component.Image() },
+        { Component: Component.Darkmode() },
       ],
     }),
-    //Component.PageTitle(),
-    //Component.Image(),
+    */
+    Component.MobileOnly(
+      Component.Flex({
+        direction: "row",
+
+        components: [
+          { Component: Component.Image() },
+          { Component: Component.PageTitle() },
+        ],
+      })
+    ),
+    Component.DesktopOnly(Component.PageTitle()),
+    Component.DesktopOnly(Component.Image()),
+  
     Component.MobileOnly(Component.Spacer()),
+  
+    // 두 번째 줄: Search + Darkmode
     Component.Flex({
+      direction: "row",
+
       components: [
         {
           Component: Component.Search(),
@@ -74,6 +95,7 @@ export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
     Component.PageTitle(),
+    Component.Image(),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
