@@ -6,13 +6,13 @@ const Image: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps
   const baseDir = pathToRoot(fileData.slug!)
 
   // 고정된 아이콘 경로
-  const iconPath = "/static/icon" // 경로를 맞춰주어야 합니다.
+  const iconPath = "quartz/static/icon" // 경로를 맞춰주어야 합니다.
 
   // JSX 형식으로 반환
   return (
     <img
       src={iconPath}
-      alt="아이콘 설명"
+      alt="개발하는 사카밤바피스"
       class={classNames(displayClass, 'image')}
       onClick={() => window.location.href = baseDir}
     />
