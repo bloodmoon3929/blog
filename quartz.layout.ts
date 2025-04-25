@@ -50,8 +50,8 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(
       Component.Flex({
         components: [
-          { Component: Component.Image() ,align : "center"},
-          { Component: Component.PageTitle(),align : "center"},
+          { Component: Component.Image() },
+          { Component: Component.PageTitle()},
         ],
       })
     ),
@@ -59,8 +59,8 @@ export const defaultContentPageLayout: PageLayout = {
       Component.Flex({
         direction :"column",
         components: [
-          { Component: Component.PageTitle()},
-          { Component: Component.Image() },
+          { Component: Component.PageTitle(), align : "center"},
+          { Component: Component.Image(), align : "center" },
         ],
       })
     ),
