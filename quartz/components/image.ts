@@ -6,7 +6,7 @@ import { h } from "preact" // Preact의 createElement 함수
 const Image: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
   const baseDir = pathToRoot(fileData.slug!)
 
-  const iconPath = "quartz/static/icon.png" 
+  const iconPath = "/static/icon.png" 
 
 
   return h('img', {
