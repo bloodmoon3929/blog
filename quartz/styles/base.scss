@@ -205,7 +205,6 @@ a {
       flex-direction: column;
       @media all and ($mobile) {
         gap: 0;
-        width: 100%;
         align-items: center;
         position: initial;
         display: flex;
