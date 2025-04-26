@@ -38,8 +38,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(
       Component.Flex({
         components: [
-          { Component: Component.Search(), grow: true, },
-          { Component: Component.Darkmode()},
+          { Component: Component.Image() },
         ],
       })
     ),
@@ -58,8 +57,9 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(
       Component.Flex({
         components: [
-          { Component: Component.Image() },
           { Component: Component.PageTitle()},
+          { Component: Component.Search(), grow: true, },
+          { Component: Component.Darkmode()},
         ],
       })
     ),
