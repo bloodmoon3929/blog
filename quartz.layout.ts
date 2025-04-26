@@ -58,8 +58,8 @@ export const defaultContentPageLayout: PageLayout = {
       Component.Flex({
         components: [
           { Component: Component.PageTitle()},
-          { Component: Component.Search(), grow: true, },
-          { Component: Component.Darkmode()},
+          { Component: Component.Search(), grow: true, align: "end"},
+          { Component: Component.Darkmode(), align: "end"},
         ],
       })
     ),
