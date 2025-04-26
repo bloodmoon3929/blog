@@ -39,6 +39,7 @@ export const defaultContentPageLayout: PageLayout = {
       Component.Flex({
         components: [
           { Component: Component.Image() },
+          { Component: Component.profile() },
         ],
       })
     ),
@@ -69,6 +70,7 @@ export const defaultContentPageLayout: PageLayout = {
         components: [
           { Component: Component.PageTitle()},
           { Component: Component.Image()},
+          { Component: Component.profile() },
         ],
       })
     ),

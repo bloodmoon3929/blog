@@ -23,8 +23,10 @@ import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import Image from "./image"
+import profile from "./profile"
 
 export {
+  profile,
   Image,
   ArticleTitle,
   Content,
