@@ -55,15 +55,10 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Image() },
       ],
     }),*/
+    Component.MobileOnly( { Component: Component.PageTitle()} ),
     Component.MobileOnly(
       Component.Flex({
-        components: [
-          { Component: Component.PageTitle()},
-        ],
-      })
-    ),
-    Component.MobileOnly(
-      Component.Flex({
+        gap: "1rem",
         components: [
           { Component: Component.Search(), grow: true },
           { Component: Component.Darkmode() },
