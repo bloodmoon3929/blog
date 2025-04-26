@@ -57,14 +57,8 @@ export const defaultContentPageLayout: PageLayout = {
     }),*/
     Component.MobileOnly(Component.PageTitle()),
     Component.MobileOnly(Component.Spacer()),
-    Component.MobileOnly(
-      Component.Flex({
-        components: [
-          { Component: Component.Search(), grow: true },
-          { Component: Component.Darkmode() },
-        ],
-      })
-    ),
+    Component.MobileOnly(Component.Search()),
+    Component.MobileOnly( Component.Darkmode()),
     Component.DesktopOnly(
       Component.Flex({
         direction :"column",
