@@ -126,7 +126,7 @@ inline string readString() {
     return result;
 }
 ```
-![첨부파일/bok-Pasted image 20240703211629.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/bok-Pasted%20image%2020240703211629.png)
+![첨부파일/bok-Pastedimage20240703211629.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/bok-Pastedimage20240703211629.png)
 
 그냥 map을 사용했을시에 시간은 700ms인 반면 unordered_map의 경우 220ms가 걸린다
 

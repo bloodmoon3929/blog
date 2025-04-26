@@ -47,19 +47,19 @@ $$
 \delta(x)=\frac{1}{1+e^{-x}}
 $$
 입력이 $(-\infty , ~\infty)$에서 변할 때, 출력은 (0,1)에서 작은 변화를 가진다.
-![첨부파일/tf-Pasted image 20240702202221.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/tf-Pasted%20image%2020240702202221.png)
+![첨부파일/tf-Pastedimage20240702202221.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/tf-Pastedimage20240702202221.png)
 #### tanh
 $$
 tanh(z)=\frac{e^z-e^{-z}}{e^z+e^{-z}}
 $$
 입력이 $(-\infty , ~\infty)$에서 변할 때, 출력은 (-1,1)에서 변화를 가진다.
-![첨부파일/tf-Pasted image 20240702212625.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/tf-Pasted%20image%2020240702212625.png)
+![첨부파일/tf-Pastedimage20240702212625.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/tf-Pastedimage20240702212625.png)
 #### ReLU
 $$
 f(x)=max(0,x)
 $$
 입력이 $(-\infty , ~\infty)$에서 변할 때, 출력은 $(0,\infty)$에서 변화를 가진다.
-![첨부파일/tf-Pasted image 20240702213552.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/tf-Pasted%20image%2020240702213552.png)
+![첨부파일/tf-Pastedimage20240702213552.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/tf-Pastedimage20240702213552.png)
 ### ELU와 LeakyReLU
 
 #### ELU
@@ -71,7 +71,7 @@ x, if x>0
 \end{cases}
 $$
 입력이 $(-\infty , ~\infty)$에서 변할 때, 출력은 $\alpha$값에 따라 변화를 가진다. ($\alpha = 1$)일 때,
-![첨부파일/tf-Pasted image 20240702213625.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/tf-Pasted%20image%2020240702213625.png)
+![첨부파일/tf-Pastedimage20240702213625.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/tf-Pastedimage20240702213625.png)
 #### LeakyReLU
 $$
 f(\alpha,x)=
@@ -81,7 +81,7 @@ x, if x>0
 \end{cases}
 $$
 입력이 $(-\infty , ~\infty)$에서 변할 때, 출력은 $\alpha$값에 따라 변화를 가진다.
-![첨부파일/tf-Pasted image 20240702213719.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/tf-Pasted%20image%2020240702213719.png)
+![첨부파일/tf-Pastedimage20240702213719.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/tf-Pastedimage20240702213719.png)
 ## 예제 - 필기체 학습
 이미 정답이 존재하는 지도 학습임
 

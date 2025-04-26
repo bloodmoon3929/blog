@@ -13,49 +13,49 @@
 - matplotlib
 
 ## 설치 방법
-![첨부파일/Pasted image 20250407183830.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407183830.png)
+![첨부파일/Pastedimage20250407183830.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407183830.png)
 아나콘다를 검색하여 처음에 뜨는 사이트 접속
 
-![첨부파일/Pasted image 20250407183918.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407183918.png)
+![첨부파일/Pastedimage20250407183918.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407183918.png)
 우측 상단에 Free Download 클릭
 
-![첨부파일/Pasted image 20250407184000.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407184000.png)
+![첨부파일/Pastedimage20250407184000.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407184000.png)
 로그인 창 하단에 작은 글자로 Skip registration 클릭
 
-![첨부파일/Pasted image 20250407184059.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407184059.png)
+![첨부파일/Pastedimage20250407184059.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407184059.png)
 각자의 기종에 맞추어 다운로드
 
-![첨부파일/Pasted image 20250407184159.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407184159.png)
+![첨부파일/Pastedimage20250407184159.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407184159.png)
 검색 창에 Anaconda Prompt 검색 후 클릭
 
-![첨부파일/Pasted image 20250407184451.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407184451.png)
+![첨부파일/Pastedimage20250407184451.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407184451.png)
 > conda create -n (원하는 가상 환경 이름) python=3.10.10
 
 위의 명령어를 통해 가상 환경 설치 및 파이썬 버전 설정
 
 가상 환경의 이름은 원하는 이름으로 하면 되며, 버전은 위에서 언급한 버전에 해당하면, 모두 가능
 
-![첨부파일/Pasted image 20250407184707.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407184707.png)
+![첨부파일/Pastedimage20250407184707.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407184707.png)
 y 입력
 
-![첨부파일/Pasted image 20250407184749.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407184749.png)
+![첨부파일/Pastedimage20250407184749.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407184749.png)
 이 화면이 뜨면 계속하여 진행
 
-![첨부파일/Pasted image 20250407184936.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407184936.png)
+![첨부파일/Pastedimage20250407184936.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407184936.png)
 >conda activate (가상 환경 이름)
 
 위의 명령어를 통하여 가상 환경 실행
 
-![첨부파일/Pasted image 20250407185037.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407185037.png)
+![첨부파일/Pastedimage20250407185037.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407185037.png)
 성공 시 base(컴퓨터 환경)에서 (가상 환경 이름)으로 변경 된 것을 알 수 있다.
 
 
-![첨부파일/Pasted image 20250407185929.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407185929.png)
+![첨부파일/Pastedimage20250407185929.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407185929.png)
 > python -m pip install --upgrade pip
 
 위의 명령어를 통해 pip 버전을 올려준다.
 
-![첨부파일/Pasted image 20250407190029.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407190029.png)
+![첨부파일/Pastedimage20250407190029.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407190029.png)
 >python -m pip install orion-ml matplotlib
 
 위의 명령어를 통해 orion만이 아닌 orion-ml을 설치 함으로써 tensorflow와 numpy, pandas, scikit-learn등 필수적인 패키지를 모두 설치 할 수 있다.
@@ -65,41 +65,41 @@ y 입력
 이 과정에서 3~5분 가량의 시간이 소모될 수 있으니 기다리면 된다.
 
 
-![첨부파일/Pasted image 20250407191346.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407191346.png)
+![첨부파일/Pastedimage20250407191346.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407191346.png)
 >pip install ipykernel
 
 다시 cmd창으로 돌아와 위의 명령어를 입력하자
 
-![첨부파일/Pasted image 20250407191547.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407191547.png)
+![첨부파일/Pastedimage20250407191547.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407191547.png)
 > python -m ipykernel install --user --name=orion --display-name="Python (orion)"
 
 다음 명령어를 통해 가상 환경을 커널에 등록하였다. 
 
 
-![첨부파일/Pasted image 20250407190636.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407190636.png)
+![첨부파일/Pastedimage20250407190636.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407190636.png)
 > code .
 
 위의 명령어를 실행시키면 다음과 같은 화면을 볼 수 있을 것이다.
 
-![첨부파일/Pasted image 20250407190736.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407190736.png)
+![첨부파일/Pastedimage20250407190736.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407190736.png)
 해당 화면이 뜬다면 정상 동작한 것이다.
 
-![첨부파일/Pasted image 20250407190919.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407190919.png)
+![첨부파일/Pastedimage20250407190919.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407190919.png)
 폴더 열기를 통해 본인이 파일을 저장할 폴더를 연다.
 
-![첨부파일/Pasted image 20250407191027.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407191027.png)
+![첨부파일/Pastedimage20250407191027.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407191027.png)
 적당한 이름의 ipynb파일을 생성한다.
 
-![첨부파일/Pasted image 20250407191112.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407191112.png)
+![첨부파일/Pastedimage20250407191112.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407191112.png)
 우측 상단을 보면 현재 환경이 python일 것인데 이를 클릭하여 아까 만든 가상 환경으로 전환한다.
 
-![첨부파일/Pasted image 20250407191826.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407191826.png)
+![첨부파일/Pastedimage20250407191826.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407191826.png)
 우측 상단의 커널을 누르면 다음과 같은 화면이 나올 것이다. 여기서 다른 커널 선택을 누른다.
 
-![첨부파일/Pasted image 20250407191924.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407191924.png)
+![첨부파일/Pastedimage20250407191924.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407191924.png)
 그 후 Python 환경을 누른다.
 
-![첨부파일/Pasted image 20250407191957.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pasted%20image%2020250407191957.png)
+![첨부파일/Pastedimage20250407191957.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Pastedimage20250407191957.png)
 그러면 새로 만든 orion 가상 환경이 설치 되어있는 것을 알 수 있다.
 
 

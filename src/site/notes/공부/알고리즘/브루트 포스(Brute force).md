@@ -80,7 +80,7 @@ public class BruteForce {
 }
 ```
 
-![첨부파일/algorithm-Image 1.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/algorithm-Image%201.png)
+![첨부파일/algorithm-Image1.png](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/algorithm-Image1.png)
 
 0000부터 9999까지 4자리 수를 모두 탐색해서 비밀번호를 찾았다.
 

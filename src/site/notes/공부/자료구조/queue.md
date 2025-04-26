@@ -38,16 +38,16 @@
 ## 4. 큐의 종류
 
 - **선형 큐 (Linear Queue):** 데이터를 FIFO 순서로 처리하는 가장 기본적인 큐  
-    ![첨부파일/algorithm-Image 1.png|image](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/algorithm-Image%201.png)
+    ![첨부파일/algorithm-Image1.png|image](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/algorithm-Image1.png)
     
 - **환형 큐 (Circular Queue):** 큐의 마지막 요소가 첫 요소와 연결된 큐로, 원형으로 순환  
-    ![첨부파일/algorithm-Image 2.png|image](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/algorithm-Image%202.png)
+    ![첨부파일/algorithm-Image2.png|image](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/algorithm-Image2.png)
     
 - **우선순위 큐 (Priority Queue):** 각 데이터 요소에 우선순위를 할당하고 해당 우선순위에 따라 데이터를 처리하는 큐  
-    ![첨부파일/algorithm-Image 3.png|image](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/algorithm-Image%203.png)
+    ![첨부파일/algorithm-Image3.png|image](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/algorithm-Image3.png)
     
 - **데큐(De Queue)** : 양쪽에서 삽입, 삭제가 가능한 구조  
-    ![첨부파일/algorithm-Image 4.png|image](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/algorithm-Image%204.png)
+    ![첨부파일/algorithm-Image4.png|image](/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/algorithm-Image4.png)
     
 
   
