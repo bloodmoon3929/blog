@@ -55,7 +55,13 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Image() },
       ],
     }),*/
-    Component.MobileOnly( { Component: Component.PageTitle()} ),
+    Component.MobileOnly(
+      Component.Flex({
+        components: [
+          { Component: Component.PageTitle()},
+        ],
+      })
+    ),
     Component.MobileOnly(
       Component.Flex({
         components: [
