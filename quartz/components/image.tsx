@@ -39,8 +39,10 @@ Image.css = `
 
 @media (max-width: 768px) {
   .image {
-    width: 100px;
-    height: 100px;
+    width: 100px !important;
+    height: 100px !important;
+    max-width: 100px;
+    max-height: 100px;
   }
 }
 `
