@@ -56,6 +56,7 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),*/
     Component.MobileOnly(Component.PageTitle()),
+    Component.MobileOnly(Component.Spacer()),
     Component.MobileOnly(
       Component.Flex({
         components: [
