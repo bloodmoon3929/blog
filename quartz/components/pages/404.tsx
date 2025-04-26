@@ -6,6 +6,7 @@ const NotFound: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
 
   return (
     <article class="notfound-container">
+      <h1>404</h1>
       <img src="/blog/img/user/첨부파일/404.png" alt="404 이미지" class="notfound-image" />
       <p class="notfound-message">
         현재 이 페이지는 만들어지지 않았어요,<br/>
