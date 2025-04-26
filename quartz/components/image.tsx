@@ -11,7 +11,7 @@ const Image: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps
   return (
     <a href={baseDir} style={{ display: "inline-block" }}>
       <img
-        src="/static/icon.png"
+        src="./static/icon.png"
         alt="개발하는 사카밤바피스"
         class={classNames(displayClass, 'image')}
       />
