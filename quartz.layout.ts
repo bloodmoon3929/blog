@@ -60,7 +60,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(
       Component.Flex({
         components: [
-          { Component: Component.Search(), grow: false },
+          { Component: Component.Search(), grow: true },
           { Component: Component.Darkmode() },
         ],
       })
