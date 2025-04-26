@@ -35,6 +35,16 @@ Image.css = `
 .image:active {
   transform: scale(0.95);
 }
+
+
+@media (max-width: 768px) {
+  .image {
+    width: 100px;
+    height: 100px;
+  }
+}
 `
+
+
 
 export default (() => Image) satisfies QuartzComponentConstructor
