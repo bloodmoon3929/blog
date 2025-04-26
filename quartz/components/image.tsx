@@ -39,8 +39,8 @@ Image.css = `
 
 @media (max-width: 768px) {
   .image.mobile-only {
-    width: 100px !important;
-    height: 100px !important;
+    width: 100px;
+    height: 100px;
   }
 }
 
