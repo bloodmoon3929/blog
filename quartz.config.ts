@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "ko-KR",
-    baseUrl: "https://bloodmoon3929.github.io/blog",
+    baseUrl: "bloodmoon3929.github.io/blog",
     ignorePatterns: [
       "private", 
       "templates", 
