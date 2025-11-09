@@ -34,10 +34,18 @@ jobs:
 
       - name: Transform image links for web (temporary)
         run: |
-          find src/site/notes -name "*.md" -type f -exec sed -i 's|/src/site/img/|/img/|g' {} +
+          find src/site/notes -name "*.md" -type f -exec sed -i 's|/src/site/|/|g' {} +
 
       - name: Build Quartz
         run: npx quartz build
+
+      - name: Check built files (debug)
+        run: |
+          echo "=== Checking public/img/user/첨부파일/ ==="
+          ls -la public/img/user/첨부파일/ || echo "Directory not found"
+          echo ""
+          echo "=== Checking for specific file ==="
+          find public/img/user/첨부파일/ -name "*2주차*" || echo "File not found"
 
       - name: Copy robots.txt to public
         run: cp robots.txt ./public/robots.txt
