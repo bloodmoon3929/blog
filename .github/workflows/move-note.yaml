@@ -32,6 +32,10 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Transform image links for web (temporary)
+        run: |
+          find src/site/notes -name "*.md" -type f -exec sed -i 's|/src/site/img/|/img/|g' {} +
+
       - name: Build Quartz
         run: npx quartz build
 
