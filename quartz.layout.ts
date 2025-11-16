@@ -94,7 +94,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(
       Component.Flex({
         components: [
-          { Component: Component.Image() },
+//          { Component: Component.Image() },
           { Component: Component.profile() },
         ],
       })
@@ -112,7 +112,7 @@ export const defaultListPageLayout: PageLayout = {
         direction :"column",
         components: [
           { Component: Component.PageTitle()},
-          { Component: Component.Image()},
+//          { Component: Component.Image()},
           { Component: Component.profile() },
         ],
       })
