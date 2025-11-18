@@ -1,0 +1,66 @@
+services:
+  quartz-blog:
+    image: node:22-slim
+    container_name: quartz-blog
+    restart: unless-stopped
+    working_dir: /usr/src/app
+    volumes:
+      - /srv/dev-disk-by-uuid-f17a6113-d906-465d-b0c2-67916b2feb5f/500gssd(1)/quartz-blog:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+    environment:
+      - NODE_ENV=production
+    command: >
+      sh -c "
+      npm ci &&
+      npx quartz build --serve --port 8080
+      "
+    networks:
+      - quartz-network
+
+  quartz-proxy:
+    image: alpine/socat
+    container_name: quartz-proxy
+    restart: unless-stopped
+    command: tcp-listen:3000,fork,reuseaddr tcp-connect:quartz-blog:8080
+    depends_on:
+      - quartz-blog
+    networks:
+      - quartz-network
+
+  nginx-lb:
+    image: nginx:alpine
+    container_name: nginx-loadbalancer
+    restart: unless-stopped
+    ports:
+      - "2052:2052"
+    volumes:
+      - /srv/dev-disk-by-uuid-f17a6113-d906-465d-b0c2-67916b2feb5f/500gssd(1)/quartz-blog/docker-deployment/nginx-lb.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - quartz-proxy
+    networks:
+      - quartz-network
+
+  webhook-server:
+    image: python:3.11-slim
+    container_name: quartz-webhook
+    restart: unless-stopped
+    ports:
+      - "8099:8099"
+    volumes:
+      - /srv/dev-disk-by-uuid-f17a6113-d906-465d-b0c2-67916b2feb5f/500gssd(1)/quartz-blog/docker-deployment/webhook-server.py:/app/webhook-server.py:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WEBHOOK_TOKEN=${WEBHOOK_TOKEN:-your-secret-token-here}
+      - WEBHOOK_PORT=8099
+    working_dir: /app
+    command: python3 webhook-server.py
+    networks:
+      - quartz-network
+
+volumes:
+  node_modules:
+    driver: local
+
+networks:
+  quartz-network:
+    driver: bridge

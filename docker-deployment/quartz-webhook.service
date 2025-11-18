@@ -1,0 +1,16 @@
+[Unit]
+Description=Quartz Blog Webhook Server
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/srv/dev-disk-by-uuid-f17a6113-d906-465d-b0c2-67916b2feb5f/500gssd(1)/quartz-blog/docker-deployment
+Environment="WEBHOOK_TOKEN=your-secret-token-here-change-this"
+Environment="WEBHOOK_PORT=8099"
+ExecStart=/usr/bin/python3 /srv/dev-disk-by-uuid-f17a6113-d906-465d-b0c2-67916b2feb5f/500gssd\(1\)/quartz-blog/docker-deployment/webhook-server.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
