@@ -31,7 +31,7 @@
 #### 자동차
 - Jetson TX2
 ### 시스템 구성도
-![첨부파일/노드_구조 1.png](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/%EB%85%B8%EB%93%9C_%EA%B5%AC%EC%A1%B0%201.png)
+![첨부파일/노드_구조_1.png](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/%EB%85%B8%EB%93%9C_%EA%B5%AC%EC%A1%B0_1.png)
 - 기설된 CCTV의 역할을 수행할 intel사의 영상이 Camera 노드를 통해  /camera/camera/color/image_raw 신호로 발행됨
 - [[공부/캠프/제 12회 SW융합해커톤/해커톤_자료/Yolo_ros/Yolo ros|Yolo ros]]의 yolo_node, tracking_node, debug_node는 이를 구독하여 기존의 Yolo 모델의 단점인 사람이 감지되지 않음에도 트래픽을 잡아먹는다는 문제를 해결하고자 LifeCycle 도입
 - Yolo/detection 노드를 통해 person이나 human이라는 라벨 이름이 감지되게 되면 /personflag에서 true 값이 반환하게 됨

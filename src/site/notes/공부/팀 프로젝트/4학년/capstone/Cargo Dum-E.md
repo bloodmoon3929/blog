@@ -396,11 +396,11 @@ void loop() {
 
 ![첨부파일/20250412_181608.jpg](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/20250412_181608.jpg)
 
-![첨부파일/20250412_181611.jpg](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/20250412_181611.jpg)![첨부파일/20250412_181608 1.jpg](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/20250412_181608%201.jpg)
+![첨부파일/20250412_181611.jpg](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/20250412_181611.jpg)![첨부파일/20250412_181608_1.jpg](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/20250412_181608_1.jpg)
 
 
 
-![첨부파일/20250412_181611 1.jpg](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/20250412_181611%201.jpg)
+![첨부파일/20250412_181611_1.jpg](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/20250412_181611_1.jpg)
 
 
 ![첨부파일/20250412_182340.jpg](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/20250412_182340.jpg)
