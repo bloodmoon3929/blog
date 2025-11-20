@@ -27,150 +27,150 @@ intel의 N150 CPU는 정식으로 발매된 제품이 아닌 하청으로 만들
 
 OS 설치 방법은 다른 OS를 설치하는 것처럼 iso 파일을 USB에 넣어 부팅하는 것이다. 부팅시 나오는 화면은 다음과 같을 것이다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/OMVinit.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/OMVinit.png)
 
 Install을 누르면 동작이 멈춘것처럼 보이지만 잠시 기다리면 리눅스 부팅 화면과 유사한 화면이 나오게 될  것이다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/SelectLanguage.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/SelectLanguage.png)
 이 화면은 언어 선택화면인데 이것은 OMV의 언어와는 상관없고, 설치시의 언어 설정이다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/location.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/location.png)
 다음은 지역 설정인데, 이도 나중에 설정 가능하다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/KeyBoard.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/KeyBoard.png)
 다음은 키보드 언어 세팅인데, 이 역시 OMV와는 관련이 없고, 한글을 입력해야 하는 설정이 없다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Wait.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Wait.png)
 모두 선택하고 나면 다음과 같은 화면이 뜰텐데 10분정도 걸리니 대기하면 된다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/NasName.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/NasName.png)
 다음은 이 Nas의 이름을 지어주는 화면이다. 기본은 openmediavault지만 원하는 이름으로 바꾸어주면 된다. 나중에 네트워크 내에서 파일을 공유할때 뜨는 이름이니 적절한 이름을 선택해주면 된다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/DomainName.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/DomainName.png)
 다음은 도메인 이름을 정하는 것인데, 이것은 그냥 local 기본값으로 선택하면 된다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/RootPassword.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/RootPassword.png)
 이 부분은 중요한데 root의 비밀번호를 정해주는 부분이다. 초반을 제외하고 콘솔로 접근 할일은 거의 없지만 이 부분은 보안과 관련되어 있기에 신중히 정해야 한다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Timesetting.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Timesetting.png)
 다음은 시간 선택이고, 위에서 선택한 지역의 시간중 선택할 수 있다. 어쩌피 이 부분은 추후 변경 가능하기에 중요하지는 않다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/PartionDisk.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/PartionDisk.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/SeletDisk.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/SeletDisk.png)
 이 부분은 Nas OS가 설치될 공간을 선택하는 곳이고, 설치시 내부의 데이터는 모두 날라가기에 이 점을 주의해야 한다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/install.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/install.png)
 이 부분은 설치 과정이고 오래 걸리는 작업이기에 여유를 가지고 기다리면 된다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Package.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Package.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/PackageManager.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/PackageManager.png)
 
 다음은 OMV의 업데이트를 관리하는 패키지 매니저를 선택하는 부분이다.
 
 당연하게도 한국서버가 가장 빠를 것이며, 미러 서버는 아무것이나 선택해도 된다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/proxy.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/proxy.png)
 다음은 프록시 설정인데 이는 추후에 가능하니 비우고 진행해도 된다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/apt.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/apt.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/installing.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/installing.png)
 
 이 부분이 가장 오래 걸리는 작업이기에 마음의 여유를 가지고 기다리면 된다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Finish.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Finish.png)
 이 화면이 뜬다면 모든 설치가 끝난것이다. 이제 Nas를 재부팅하게 된다면 다음과 같은 화면이 나올 것이다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Debian.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Debian.png)
 이 화면을 선택하면 되고 이후에는 콘솔 화면이 뜨게된다.
 
 ## OpenMediaVault 세팅
 ### 1. TimeZone 설정
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/TimeZone.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/TimeZone.png)
 
 
 ### 2. SSL 생성
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/SSL1.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/SSL1.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/SSL2.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/SSL2.png)
 
 ### 3. Workbench 설정
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Workbrench.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Workbrench.png)
 (SSL 설정하게 되면 자동 로그아웃 됨)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/logout.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/logout.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/login.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/login.png)
 
 ### 4. Hostname
 (SAMBA에서 보일 이름)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Hostname.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Hostname.png)
 
 ### 5. Raid 플러그인 설치
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Raid.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Raid.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Raidinstall.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Raidinstall.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Multiple%2520Device.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Multiple%2520Device.png)
 
 ### 6. 디스크 포멧
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/format.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/format.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/wipe.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/wipe.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Quick.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Quick.png)
 
 ### 7. 레이드 구성
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/setRaid.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/setRaid.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Mirroring.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Mirroring.png)
 (미러링 중임)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/compliteMirroring.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/compliteMirroring.png)
 
 ### 8. 파일 시스템 등록
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/filesystem.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/filesystem.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/FileType.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/FileType.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/CreateFileSystem.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/CreateFileSystem.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/fileTag.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/fileTag.png)
 (추후 태그를 통해 할당 가능)
 
 ### 9. 공유폴더
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/SharedFolder.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/SharedFolder.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/createShared.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/createShared.png)
 
 ### 10. 사용자 생성
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Users.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Users.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/createUser.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/createUser.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/userSetting.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/userSetting.png)
 
 ### 11. SMB 설정
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/SMBsetting.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/SMBsetting.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/settingSMB.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/settingSMB.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/sharedSMB.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/sharedSMB.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/SharedOption.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/SharedOption.png)
 
 ### 12. Docker
 (CLI로 OMV 확장 설치)
@@ -179,28 +179,28 @@ Install을 누르면 동작이 멈춘것처럼 보이지만 잠시 기다리면 
 sudo wget -O - https://github.com/OpenMediaVault-Plugin-Developers/installScript/raw/master/install | sudo bash
 ```
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/CLIDocker.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/CLIDocker.png)
 
 (Docker repo 활성화)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Dockerrepo.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Dockerrepo.png)
 
 (Compose 설치)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Compose.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Compose.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/installcompose.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/installcompose.png)
 
 (Compose 세팅)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Compose%2520setting.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Compose%2520setting.png)
 
 ## nextcloud 세팅
 ### dockwr를 통한 nextcloud 생성
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/nextcloud.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/nextcloud.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/create_nextcloud.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/create_nextcloud.png)
 
 #### yml 파일
 ```
@@ -452,9 +452,9 @@ Nextcloud의 백그라운드 작업을 실행하는 명령
 
 파일 스캔, 미리보기 생성, 휴지통 비우기, 버전 정리, 알림 전송, 앱 업데이트 확인, 로그 정리등의 기능을 처리한다.
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/Cron.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Cron.png)
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/CronSetting.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/CronSetting.png)
 
 위의 세팅으로 5분마다 백그라운드 작업을 처리한다.
 

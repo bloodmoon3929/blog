@@ -89,7 +89,7 @@ class SampleSettingTab extends PluginSettingTab {
   }
 }
 ```
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/samplesetting.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/samplesetting.png)
 
 ## 핵심 문법
 ### onload
@@ -124,7 +124,7 @@ this.addRibbonIcon("dice", "Tooltip Text", () => {
 });
 ```
 
-![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/Asset/samplesidebar.png)
+![alt text](/src/site/img/user/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/samplesidebar.png)
 
 ### 커맨드 팔레트
 명령어를 추가 할 수 있음
